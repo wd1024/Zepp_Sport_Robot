@@ -165,6 +165,8 @@ if __name__ == "__main__":
     # 从环境变量安全地获取 GitHub Secret 中的账号与密码
     ACCOUNT = os.environ.get("ACCOUNT", "")
     PASSWORD = os.environ.get("PASSWORD", "")
+    ACCOUNT2 = os.environ.get("ACCOUNT2", "")
+    PASSWORD2 = os.environ.get("PASSWORD2", "")
     
     # 用户账号组配置:每个账号可以设置固定步数或使用随机范围
     # 配置格式: [账号, 密码, 步数设置]
@@ -174,7 +176,7 @@ if __name__ == "__main__":
         # - None: 使用默认随机范围
     AccountGroup = [
         [ACCOUNT, PASSWORD, 21000],   # 使用默认随机步数
-        #['账号2', '密码2', [20000, 40000]],  # 使用随机范围20000-40000
+        [ACCOUNT2, PASSWORD2, 11000],  # 使用随机范围20000-40000
         #['账号3', '密码3', [30000, 50000]],  # 使用随机范围30000-50000
         #['账号4', '密码4', 50000],  # 使用定值步数50000
     ]
